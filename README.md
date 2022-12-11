@@ -1,4 +1,4 @@
-# Gotraderr
+![gotrade-rr-low-resolution-logo-color-on-transparent-background](https://user-images.githubusercontent.com/65465380/206923240-93ba1f6f-6d4b-46c1-81f4-b060cf95e294.png)
 
 <a href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
 
