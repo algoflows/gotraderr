@@ -1,0 +1,32 @@
+{
+  "name": "clients-web-gotradder-solid-e2e",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/clients/web/gotradder-solid-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/clients/web/gotradder-solid-e2e/cypress.config.ts",
+        "devServerTarget": "clients-web-gotraderr-solid:serve",
+        "testingType": "e2e"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "clients-web-gotraderr-solid:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "apps/clients/web/gotradder-solid-e2e/**/*.{js,ts}"
+        ]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["clients-web-gotraderr-solid"]
+}

@@ -1,0 +1,32 @@
+{
+  "name": "clients-web-gotraderr-svelte-e2e",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/clients/web/gotraderr-svelte-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/clients/web/gotraderr-svelte-e2e/cypress.config.ts",
+        "devServerTarget": "clients-web-gotraderr-svelte:serve",
+        "testingType": "e2e"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "clients-web-gotraderr-svelte:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "apps/clients/web/gotraderr-svelte-e2e/**/*.{js,ts}"
+        ]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["clients-web-gotraderr-svelte"]
+}
